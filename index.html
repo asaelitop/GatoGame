@@ -3,65 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temario de [Nombre del Tema]</title>
+    <title>Temario de 3 En Línea</title>
     <style>
-        /* Aquí puedes agregar tus estilos CSS para personalizar la apariencia del temario */
+        /* Diseño general */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
+            background-color: #3feb78;
+            color: #333;
             line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Alinear el contenido en la parte superior */
+            min-height: 100vh;
         }
+
+        /* Contenedor principal */
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+        }
+
+        /* Encabezados */
         h1, h2, h3 {
             text-align: center;
+            color: #2c3e50;
         }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #34495e;
+        }
+
+        /* Listas */
         ul {
             list-style: none;
             padding: 0;
         }
+
         li {
+            background: #ecf0f1;
             margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Enlaces */
+        a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <h1>3 En linea</h1>
-    <h2>Integrantes:</h2>
-    <ul>
-        <li>Andrea Jacob Salas</li>
-        <li>Asael Manuel Otero Reyes</li>
-    </ul>
+    <div class="container">
+        <h1>3 En Línea</h1>
+        <h2>Integrantes:</h2>
+        <ul>
+            <li>Andrea Jacob Salas</li>
+            <li>Asael Manuel Otero Reyes</li>
+        </ul>
 
-    <ul>
-        <li>¿De que trata el juego?</li>
-        <li>
-            El tres en raya es un juego de estrategia para dos jugadores que se disputa en un
-             tablero de 3x3 casillas. Cada jugador elige un símbolo, generalmente una "X" o un "O", y se
-              turnan para marcar una casilla vacía. Gana el primer jugador que logre alinear tres de 
-              sus símbolos en línea recta, ya sea horizontal, vertical o diagonalmente. Si todas las 
-              casillas se llenan sin que ningún jugador haya ganado, se considera un empate. Es un juego 
-              sencillo pero que requiere pensar estratégicamente para anticipar los movimientos del oponente
-               y asegurar la victoria.
-        </li>
-    </ul>
+        <ul>
+            <li><strong>¿De qué trata el juego?</strong></li>
+            <li>
+                El tres en raya es un juego de estrategia para dos jugadores que se disputa en un
+                tablero de 3x3 casillas. Cada jugador elige un símbolo, generalmente una "X" o un "O", y se
+                turnan para marcar una casilla vacía. Gana el primer jugador que logre alinear tres de 
+                sus símbolos en línea recta, ya sea horizontal, vertical o diagonalmente. Si todas las 
+                casillas se llenan sin que ningún jugador haya ganado, se considera un empate. Es un juego 
+                sencillo pero que requiere pensar estratégicamente para anticipar los movimientos del oponente
+                y asegurar la victoria.
+            </li>
+        </ul>
 
-    <ul>
-        <h3>implementación</h3>
-        <li>Para el juego de 3 en linea o el gato y el raton, se pensó en crar tres clases, las cuale son JUGADOR,
-            TABLERO y JUEGO.
-        </li>
-        <li>En la clase JUGADOR se tiene como atributos los simbolos que se utilizan en representacion para cada uno de los dos jugadores,
-            el simbolo "X" y el simbolo "O", y como metodos existe el metodo "turno()" en el cual se cuenta el numero de clicks
-            que se dan, en este juego son 9. El primer click sera con el simbolo de "O" y el otro click siguiente se le asignará el simbolo "X"
-            y así susesivamente. Entonces el metodo hará eso, el intercambio de simbolos en cada uno de los 9 clicks.
-        </li>
-        <li>El otro meto que se tiene en esta clase es "realizar jugada()", este metodo se encargará de que el espacio seleccionado por el usuario sea 
-            valido y que no esté sobrescribiendo a otro simbolo de los que ya se hayan colocado.
-         </li>
-    </ul>
-    <ul>
-        <li>La siguente clase está llamada TABLERO, en la cual recibe la longitud que tienen las filas y columnas del juego, en este juego son 3 lineas de 3 
-            espacios y lo mismo con las columnas, 3 columnas de 3 espacios.
-        </li>
-        <li></li>
-    </ul>
-    </body>
+        <ul>
+            <h3>Implementación</h3>
+            <li>Para el juego de 3 en línea, se pensó en crear tres clases: <strong>JUGADOR</strong>, <strong>TABLERO</strong> y <strong>JUEGO</strong>.</li>
+            <li>
+                En la clase <strong>JUGADOR</strong> se tienen como atributos los símbolos que se utilizan para representar a cada uno de los dos jugadores,
+                el símbolo "X" y el símbolo "O". Como métodos, se cuenta con el método <em>turno()</em>, que cuenta el número de clics
+                dados (en este juego son 9). El primer clic será con el símbolo "O" y el siguiente clic se le asignará el símbolo "X",
+                y así sucesivamente. Este método intercambia los símbolos en cada uno de los 9 clics.
+            </li>
+            <li>
+                Otro método en esta clase es <em>realizar_jugada()</em>. Este método se asegura de que el espacio seleccionado por el usuario sea 
+                válido y que no sobrescriba otro símbolo ya colocado.
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                En la clase llamada <strong>JUEGO</strong>, se gestiona el jugador y el ganador. Los turnos se heredan de la clase Jugador, permitiendo que se pueda jugar. Esta clase hereda de Tablero.
+            </li>
+            <li>
+                El método <em>iniciar_juego()</em> es el encargado de que el tablero inicie con sus valores en 0, es decir, en blanco.
+            </li>
+            <li>
+                El método <em>verificar_ganador(fila, columna)</em> recibe como atributos fila y columna para que al momento de tomar un turno, este método haga 
+                un recuento de cómo están distribuidos los símbolos y pueda checar los casos posibles de victoria. Si se cumple, imprime el mensaje "Gana: X" o "Gana: O".
+            </li>
+            <li>
+                El método <em>empate()</em> verifica que si al realizar los 9 clics no hay un ganador, entonces se imprime el mensaje "¡Empate!".
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                La siguiente clase se llama <strong>TABLERO</strong>, en la cual se recibe la longitud de las filas y columnas del juego. En este juego, son 3 líneas de 3 
+                espacios, y lo mismo para las columnas.
+            </li>
+            <li>
+                Dentro de la clase, existe el método <em>mostrar_tabla()</em>, cuya función es que, por medio de un frame, pueda mostrar la estructura visual del juego (Tablero) 
+                dividida conforme a la longitud de los atributos.
+            </li>
+            <li>
+                También existe la función <em>colocar_simbolos()</em>, que se encarga de que al hacer clic en la pantalla se muestre el símbolo "O" en el primer clic, y en el segundo clic se muestre el símbolo "X".
+            </li>
+        </ul>
+    </div>
+</body>
 </html>
