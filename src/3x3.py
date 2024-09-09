@@ -13,8 +13,8 @@ root.title("3x3")
 
 mainframe = ttk.Frame(root, padding="3 3 12 12")
 mainframe.grid(column=0, row=0, sticky=(N, W, E, S))
-root.columnconfigure(0, weight=1)
-root.rowconfigure(0, weight=1)
+root.columnconfigure(0, weight=2)
+root.rowconfigure(0, weight=2)
 
 mensaje = StringVar()
 ttk.Label(mainframe, textvariable=mensaje).grid(column=1, row=0, sticky=(W, E), padx=5, pady=5)
