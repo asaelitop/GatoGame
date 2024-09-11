@@ -90,7 +90,7 @@
         <ul>
             <li><strong>¿De qué trata el juego?</strong></li>
             <li>
-                El tres en raya es un juego de estrategia para dos jugadores que se disputa en un
+                El tres en linea es un juego de estrategia para dos jugadores que se disputa en un
                 tablero de 3x3 casillas. Cada jugador elige un símbolo, generalmente una "X" o un "O", y se
                 turnan para marcar una casilla vacía. Gana el primer jugador que logre alinear tres de 
                 sus símbolos en línea recta, ya sea horizontal, vertical o diagonalmente. Si todas las 
@@ -98,53 +98,28 @@
                 sencillo pero que requiere pensar estratégicamente para anticipar los movimientos del oponente
                 y asegurar la victoria.
             </li>
+            <h2>Implementación:</h2>
+            <h3>clase:</h3>
+        <ul> 
+            <li>El juego "Tres en linea", se penso crear una clase:<strong>Tres_en_linea</strong> la cual tiene los siguientes atributos y metodos</li> 
         </ul>
-
+            <h3>Atributos:</h3>
         <ul>
-            <h3>Implementación</h3>
-            <li>Para el juego de 3 en línea, se pensó en crear tres clases: <strong>JUGADOR</strong>, <strong>TABLERO</strong> y <strong>JUEGO</strong>.</li>
-            <li>
-                En la clase <strong>JUGADOR</strong> se tienen como atributos los símbolos que se utilizan para representar a cada uno de los dos jugadores,
-                el símbolo "X" y el símbolo "O". Como métodos, se cuenta con el método <em>turno()</em>, que cuenta el número de clics
-                dados (en este juego son 9). El primer clic será con el símbolo "O" y el siguiente clic se le asignará el símbolo "X",
-                y así sucesivamente. Este método intercambia los símbolos en cada uno de los 9 clics.
-            </li>
-            <li>
-                Otro método en esta clase es <em>realizar_jugada()</em>. Este método se asegura de que el espacio seleccionado por el usuario sea 
-                válido y que no sobrescriba otro símbolo ya colocado.
-            </li>
+                <li><strong>player</strong>: Este atributo almacena el símbolo del jugador actual, que puede ser "X" o "O".</li>
+                <li><strong>game_over</strong>: Este booleano indica si el juego ha terminado, es decir, si hay un ganador o si se ha producido un empate.</li>
+                <li><strong>frame</strong>: Este atributo es un contenedor que alberga los botones del tablero de juego.</li>
+                <li><strong>buttons</strong>: Se trata de una matriz que contiene los botones que representan cada una de las casillas del tablero.</li>
+                <li><strong>reset_button</strong>: Este es el botón que permite reiniciar el juego.</li>
         </ul>
-
+             <h3>Métodos:</h3>
         <ul>
-            <li>
-                En la clase llamada <strong>JUEGO</strong>, se gestiona el jugador y el ganador. Los turnos se heredan de la clase Jugador, permitiendo que se pueda jugar. Esta clase hereda de Tablero.
-            </li>
-            <li>
-                El método <em>iniciar_juego()</em> es el encargado de que el tablero inicie con sus valores en 0, es decir, en blanco.
-            </li>
-            <li>
-                El método <em>verificar_ganador(fila, columna)</em> recibe como atributos fila y columna para que al momento de tomar un turno, este método haga 
-                un recuento de cómo están distribuidos los símbolos y pueda checar los casos posibles de victoria. Si se cumple, imprime el mensaje "Gana: X" o "Gana: O".
-            </li>
-            <li>
-                El método <em>empate()</em> verifica que si al realizar los 9 clics no hay un ganador, entonces se imprime el mensaje "¡Empate!".
-            </li>
+                <li><strong>__init__(master: Tk)</strong>: Este es el constructor de la clase, que inicializa el juego y la interfaz gráfica al establecer el estado inicial y crear los componentes visuales.</li>
+                <li><strong>verificar_ganador()</strong>: Este método verifica si hay un ganador en el juego, comprobando las filas, columnas y diagonales en busca de tres símbolos iguales.</li>
+                <li><strong>boton_click(row: int, col: int)</strong>: Este método maneja el evento de clic en un botón, actualizando el tablero y verificando si hay un ganador o un empate.</li>
+                <li><strong>reset_game()</strong>: Este método reinicia el estado del juego, limpiando el tablero y restableciendo el jugador a "X".</li>
         </ul>
-
-        <ul>
-            <li>
-                La siguiente clase se llama <strong>TABLERO</strong>, en la cual se recibe la longitud de las filas y columnas del juego. En este juego, son 3 líneas de 3 
-                espacios, y lo mismo para las columnas.
-            </li>
-            <li>
-                Dentro de la clase, existe el método <em>mostrar_tabla()</em>, cuya función es que, por medio de un frame, pueda mostrar la estructura visual del juego (Tablero) 
-                dividida conforme a la longitud de los atributos.
-            </li>
-            <li>
-                También existe la función <em>colocar_simbolos()</em>, que se encarga de que al hacer clic en la pantalla se muestre el símbolo "O" en el primer clic, y en el segundo clic se muestre el símbolo "X".
-            </li>
-        </ul>
-         <img src="./Imagen/diagrama.jpg" alt= "Diagrama" width="600">
+       
+         <img src="./Imagen/3 en linea (2).png" alt= "Diagrama" width="600">
     </div>
 </body>
 </html>
