@@ -105,21 +105,21 @@
         </ul>
             <h3>Atributos:</h3>
         <ul>
-                <li><strong>player</strong>: Este atributo almacena el símbolo del jugador actual, que puede ser "X" o "O".</li>
-                <li><strong>game_over</strong>: Este booleano indica si el juego ha terminado, es decir, si hay un ganador o si se ha producido un empate.</li>
-                <li><strong>frame</strong>: Este atributo es un contenedor que alberga los botones del tablero de juego.</li>
-                <li><strong>buttons</strong>: Se trata de una matriz que contiene los botones que representan cada una de las casillas del tablero.</li>
-                <li><strong>reset_button</strong>: Este es el botón que permite reiniciar el juego.</li>
+                <li><strong>player:str</strong>: Este atributo almacena el símbolo del jugador actual, que puede ser "X" o "O".</li>
+                <li><strong>game_over:bool</strong>: Este booleano indica si el juego ha terminado, es decir, si hay un ganador o si se ha producido un empate.</li>
+                <li><strong>frame:Frame</strong>: Este atributo es un contenedor que alberga los botones del tablero de juego.</li>
+                <li><strong>buttons:list</strong>: Se trata de una matriz que contiene los botones que representan cada una de las casillas del tablero.</li>
+                <li><strong>reset_button:Buttons</strong>: Este es el botón que permite reiniciar el juego.</li>
         </ul>
              <h3>Métodos:</h3>
         <ul>
-                <li><strong>__init__(master: Tk)</strong>: Este es el constructor de la clase, que inicializa el juego y la interfaz gráfica al establecer el estado inicial y crear los componentes visuales.</li>
-                <li><strong>verificar_ganador()</strong>: Este método verifica si hay un ganador en el juego, comprobando las filas, columnas y diagonales en busca de tres símbolos iguales.</li>
-                <li><strong>boton_click(row: int, col: int)</strong>: Este método maneja el evento de clic en un botón, actualizando el tablero y verificando si hay un ganador o un empate.</li>
+                <li><strong>void__init__(self,Tk:master)</strong>: Este es el constructor de la clase, que inicializa el juego y la interfaz gráfica al establecer el estado inicial y crear los componentes visuales.</li>
+                <li><strong>bool_verificar_ganador()</strong>: Este método verifica si hay un ganador en el juego, comprobando las filas, columnas y diagonales en busca de tres símbolos iguales.</li>
+                <li><strong>void_boton_click(row: int, col: int)</strong>: Este método maneja el evento de clic en un botón, actualizando el tablero y verificando si hay un ganador o un empate.</li>
                 <li><strong>reset_game()</strong>: Este método reinicia el estado del juego, limpiando el tablero y restableciendo el jugador a "X".</li>
         </ul>
        
-         <img src="./Imagen/3 en linea (2).png" alt= "Diagrama" width="600">
+         <img src="./Imagen/3 en linea.png"alt= "Diagrama" width="600">
     </div>
 </body>
 </html>
